@@ -1,7 +1,7 @@
 ---
 title: "CV"
-author: "FIRSTNAME FAMILYNAME"
-email: FIRSTNAME.FAMILYNAME@student.umons.ac.be
+author: "gloria scalzo"
+email: gloria.scalzo@student.umons.ac.be
 output: 
   pdf_document:
     latex_engine: pdflatex
@@ -10,29 +10,33 @@ fontfamily: mathpazo
 fontfamilyoptions: sc, osf
 fontsize: 10pt
 geometry: margin=1in
-github: USERNAME
+github: gloria-scalzo
 jobtitle: Etudiant à l'Université de Mons
 keywords: Biologie, Science des données
-linkcolor: blue
+linkcolor: purple
 fontawesome: no
 address: 8 avenue du Champ de Mars, 7000 Mons, Belgique
 updated: yes
-urlcolor: blue
+urlcolor: green
 ---
 
 # EDUCATION
 
 *Université de Mons*, Bachelier en Biologie \hfill 2020
 
-*Ecole secondaire*, orientation \hfill 2017
+*Saint-Stanilas Mons*, Néerlandais, Anglais, Sciences 6h \hfill 2016
 
 
 # EMPLOIS
 
 *Job étudiant:*
 
- > Activité réalisée \hfill 2017--2018
-
+ > Etudiante au servive des ressources humaines chez Industeel Belgium \hfill juillet 2017
+ > Etudiante chez Activate Mons pour UNICEF \hfill juillet-août 2017
+ > Etudiante au service urbanisme de la commune de Frameries \hfill août 2017
+ > Etudiante à l'UMons dans le cadre du grand nettoyage d'été des cités universitaires  \hfill juillet 2018
+ > Bénévole à l'UMons dans le cadre du blocus encadré \hfill août 2018
+ 
 *Autre emploi:*
 
  > Rôle 2 \hfill 2016--2018

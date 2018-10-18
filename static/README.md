@@ -1,3 +1,3 @@
-# FIRSTNAME FAMILYNAME's Web Site
+# gloria scalzo's Web Site
 
-This is served as https://USERNAME.github.io, and the sources are in https://github.com/USERNAME/blogdown.source-USERNAME.
+This is served as https://gloria-scalzo.github.io, and the sources are in https://github.com/gloria-scalzo/blogdown.source-gloria-scalzo.

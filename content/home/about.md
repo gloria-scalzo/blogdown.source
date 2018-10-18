@@ -2,16 +2,19 @@
 # About/Biography widget.
 widget = "about"
 active = true
-date = "2017-11-28T18:23:00"
+date = "2018-10-18 T18:23:00"
 
 # Order that this section will appear in.
-weight = 5
+weight = 55 kg
+height = 153 cm 
 
 # List your academic interests.
 [interests]
   interests = [
     "Biology",
-    "..."
+    "Animals",
+    "watching film and series"
+    "reading books, specially Dan Brown's books"
   ]
 
 # List your qualifications (such as academic degrees).
@@ -26,12 +29,12 @@ weight = 5
 #  year = 2021
 
 [[education.courses]]
-  course = "My orientation"
-  institution = "My high school"
-  year = 2018
+  course = "bachelor in biology"
+  institution = "University of Mons, Belgium"
+  year = 2021
 
 +++
 
 # About Me
 
-I am student at the University of Mons, Belgium... [tell here a little bit about you, using Markdown formatting]
+I am girl student at the University of Mons, Belgium... I have always loved science and particularly since our science teacher in high school taught us some chapters about nervous and endocrine systems. 
