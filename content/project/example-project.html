@@ -124,33 +124,38 @@ $(document).ready(function () {
 </div>
 
 
-<div id="source-pour-mon-site-web-professionnel" class="section level1">
-<h1>Source pour mon site web professionnel</h1>
-<p>Ceci est la source <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> pour construire <a href="https://gloria-scalzo.github.io" class="uri">https://gloria-scalzo.github.io</a> avec <a href="https://gohugo.io">hugo</a> dans le dépôt Github <code>USERNAME.github.io</code>.</p>
-<div id="procedure" class="section level2">
-<h2>Procédure</h2>
-<p>(remplacer <code>gloria-scalzo</code> par votre propre login Github)</p>
-<ul>
-<li><p>Faites un <code>Fork</code> du dépôt</p></li>
-<li><p>Clôner le dépôt <code>blogdown.source</code>dans le dossier <strong>projects</strong></p></li>
-<li><p>Créer sur Github (<a href="https://github.com" class="uri">https://github.com</a>) un nouveau dépôt qui <strong>doit</strong> s’appeler <code>gloria-scalzo.github.io</code></p></li>
-<li><p>Le clôner également dans le dossier <strong>projects</strong></p></li>
-<li><p>Ouvrir le projet <code>blogdown.source</code> dans RStudio</p></li>
-<li>Faire une recherche de toutes les occurences des trois mots suivants à remplacer dans tous les fichiers (<code>Edit -&gt; Find in Files...</code>):
-<ul>
-<li>gloria-scalzo, à remplacer par votre login Github</li>
-<li>gloria à remplacer par votre prénom</li>
-<li>scalzo à remplacer par votre nom de famille</li>
-</ul></li>
-<li><p>Aller dans les <strong>Addins</strong> de RStudio et lancer celui qui s’intitule <code>Serve Site</code>dans la section <code>BLOGDOWN</code>… Votre site doit apparaitre.</p></li>
-<li><p>Commitez vos changements dans <code>blogdown.source</code> dans l’onglet <code>Git</code> lorsque vous êtes satisfait de vos modifications.</p></li>
-<li><p>Commitez votre site depuis <code>gloria-scalzo.github.io</code> (vous pouvez le faire très facilement depuis Github Desktop)</p></li>
-<li><p>Editez votre site en commençant par <code>content -&gt; post -&gt; getting-started.md</code> puis <code>content -&gt; project -&gt; getting-started.md</code></p></li>
-<li><p>Faites un <code>Commit</code> et <code>Push</code> de vos changements dans <code>blogdown.source</code></p></li>
-<li><p>Faites un <code>Commit</code> et <code>Push</code> de votre site depuis <code>gloria-scalzo.github.io</code> (vous pouvez le faire très facilement depuis Github Desktop)</p></li>
-<li><p>Vérifiez que votre site est bien en ligne en allant voir à l’adresse <code>https://gloria-scalzo.github.io</code> depuis votre navigateur web préféré… et contemplez le résultat!</p></li>
-</ul>
+<p>+++ # Date this page was created. date = “2018-10-15”</p>
+<div id="project-title." class="section level1">
+<h1>Project title.</h1>
+<p>title = “My project”</p>
 </div>
+<div id="project-summary-to-display-on-homepage." class="section level1">
+<h1>Project summary to display on homepage.</h1>
+<p>summary = “A short summary of my project.”</p>
+</div>
+<div id="optional-image-to-display-on-homepage-relative-to-staticimg-folder." class="section level1">
+<h1>Optional image to display on homepage (relative to <code>static/img/</code> folder).</h1>
+<p>image_preview = “project.jpg”</p>
+</div>
+<div id="tags-can-be-used-for-filtering-projects." class="section level1">
+<h1>Tags: can be used for filtering projects.</h1>
+</div>
+<div id="example-tags-machine-learning-deep-learning" class="section level1">
+<h1>Example: <code>tags = [&quot;machine-learning&quot;, &quot;deep-learning&quot;]</code></h1>
+<p>tags = [“science”, “biology”]</p>
+</div>
+<div id="optional-external-url-for-project-replaces-project-detail-page." class="section level1">
+<h1>Optional external URL for project (replaces project detail page).</h1>
+<p>external_link = “”</p>
+</div>
+<div id="does-the-project-detail-page-use-math-formatting" class="section level1">
+<h1>Does the project detail page use math formatting?</h1>
+<p>math = false</p>
+</div>
+<div id="optional-featured-image-relative-to-staticimg-folder." class="section level1">
+<h1>Optional featured image (relative to <code>static/img/</code> folder).</h1>
+<p>[header] image = “headers/project-header.jpg” caption = “Image credit: <strong>Trevor Cole</strong> on Unsplash” +++</p>
+<p>Here I describe my project using Markdown formatting…</p>
 </div>
 
 

@@ -124,33 +124,271 @@ $(document).ready(function () {
 </div>
 
 
-<div id="source-pour-mon-site-web-professionnel" class="section level1">
-<h1>Source pour mon site web professionnel</h1>
-<p>Ceci est la source <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> pour construire <a href="https://gloria-scalzo.github.io" class="uri">https://gloria-scalzo.github.io</a> avec <a href="https://gohugo.io">hugo</a> dans le dépôt Github <code>USERNAME.github.io</code>.</p>
-<div id="procedure" class="section level2">
-<h2>Procédure</h2>
-<p>(remplacer <code>gloria-scalzo</code> par votre propre login Github)</p>
-<ul>
-<li><p>Faites un <code>Fork</code> du dépôt</p></li>
-<li><p>Clôner le dépôt <code>blogdown.source</code>dans le dossier <strong>projects</strong></p></li>
-<li><p>Créer sur Github (<a href="https://github.com" class="uri">https://github.com</a>) un nouveau dépôt qui <strong>doit</strong> s’appeler <code>gloria-scalzo.github.io</code></p></li>
-<li><p>Le clôner également dans le dossier <strong>projects</strong></p></li>
-<li><p>Ouvrir le projet <code>blogdown.source</code> dans RStudio</p></li>
-<li>Faire une recherche de toutes les occurences des trois mots suivants à remplacer dans tous les fichiers (<code>Edit -&gt; Find in Files...</code>):
-<ul>
-<li>gloria-scalzo, à remplacer par votre login Github</li>
-<li>gloria à remplacer par votre prénom</li>
-<li>scalzo à remplacer par votre nom de famille</li>
-</ul></li>
-<li><p>Aller dans les <strong>Addins</strong> de RStudio et lancer celui qui s’intitule <code>Serve Site</code>dans la section <code>BLOGDOWN</code>… Votre site doit apparaitre.</p></li>
-<li><p>Commitez vos changements dans <code>blogdown.source</code> dans l’onglet <code>Git</code> lorsque vous êtes satisfait de vos modifications.</p></li>
-<li><p>Commitez votre site depuis <code>gloria-scalzo.github.io</code> (vous pouvez le faire très facilement depuis Github Desktop)</p></li>
-<li><p>Editez votre site en commençant par <code>content -&gt; post -&gt; getting-started.md</code> puis <code>content -&gt; project -&gt; getting-started.md</code></p></li>
-<li><p>Faites un <code>Commit</code> et <code>Push</code> de vos changements dans <code>blogdown.source</code></p></li>
-<li><p>Faites un <code>Commit</code> et <code>Push</code> de votre site depuis <code>gloria-scalzo.github.io</code> (vous pouvez le faire très facilement depuis Github Desktop)</p></li>
-<li><p>Vérifiez que votre site est bien en ligne en allant voir à l’adresse <code>https://gloria-scalzo.github.io</code> depuis votre navigateur web préféré… et contemplez le résultat!</p></li>
-</ul>
+<p>+++ date = 2016-04-17 draft = false tags = [] title = “Writing content with Markdown, LaTeX, and Shortcodes” math = true +++</p>
+<p>Content can be written using <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a>, <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics">LaTeX math</a>, and <a href="http://gohugo.io/extras/shortcodes/">Hugo Shortcodes</a>. Additionally, HTML may be used for advanced formatting.<!--more--> This article gives an overview of the most common formatting options.</p>
+<p>{{% toc %}}</p>
+<div id="sub-headings" class="section level2">
+<h2>Sub-headings</h2>
+<pre><code>## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6</code></pre>
 </div>
+<div id="emphasis" class="section level2">
+<h2>Emphasis</h2>
+<pre><code>Italics with *asterisks* or _underscores_.
+
+Bold with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough with ~~two tildes~~.</code></pre>
+</div>
+<div id="ordered-lists" class="section level2">
+<h2>Ordered lists</h2>
+<pre><code>1. First item
+2. Another item</code></pre>
+</div>
+<div id="unordered-lists" class="section level2">
+<h2>Unordered lists</h2>
+<pre><code>* First item
+* Another item</code></pre>
+</div>
+<div id="images" class="section level2">
+<h2>Images</h2>
+<p>Images may be added to a page by placing them in your <code>static/img/</code> folder and referencing them using one of the following two notations:</p>
+<p>A general image:</p>
+<pre><code>![alternative text for search engines](/img/screenshot.png)</code></pre>
+<p>A numbered figure with caption:</p>
+<pre><code>{{&lt;/* figure src=&quot;/img/screenshot.png&quot; title=&quot;Figure Caption&quot; */&gt;}}</code></pre>
+</div>
+<div id="links" class="section level2">
+<h2>Links</h2>
+<pre><code>[I'm a link](https://www.google.com)
+[A post]({{&lt;/* ref &quot;post/hi.md&quot; */&gt;}})
+[A publication]({{&lt;/* ref &quot;publication/hi.md&quot; */&gt;}})
+[A project]({{&lt;/* ref &quot;project/hi.md&quot; */&gt;}})
+[Another section]({{&lt;/* relref &quot;hi.md#who&quot; */&gt;}})</code></pre>
+<p>To enable linking to a file, such as a PDF, first place the file in your <code>static/files/</code> folder and then link to it using the following form:</p>
+<pre><code>{{%/* staticref &quot;files/cv.pdf&quot; &quot;newtab&quot; */%}}Download my CV{{%/* /staticref */%}}</code></pre>
+<p>The optional <code>&quot;newtab&quot;</code> argument for <code>staticref</code> will cause the link to be opened in a new tab.</p>
+</div>
+<div id="emojis" class="section level2">
+<h2>Emojis</h2>
+<p>See the <a href="http://www.webpagefx.com/tools/emoji-cheat-sheet/">Emoji cheat sheet</a> for available emoticons. The following serves as an example, but you should remove the spaces between each emoji name and pair of semicolons:</p>
+<pre><code>I : heart : Academic : smile :</code></pre>
+<p>I :heart: Academic :smile:</p>
+</div>
+<div id="blockquote" class="section level2">
+<h2>Blockquote</h2>
+<pre><code>&gt; This is a blockquote.</code></pre>
+<blockquote>
+<p>This is a blockquote.</p>
+</blockquote>
+</div>
+<div id="footnotes" class="section level2">
+<h2>Footnotes</h2>
+<pre><code>I have more [^1] to say.
+
+[^1]: Footnote example.</code></pre>
+<p>I have more [^1] to say. [^1]: Footnote example.</p>
+</div>
+<div id="code-highlighting" class="section level2">
+<h2>Code highlighting</h2>
+<p>Pass the <em>language</em> of the code, such as <code>python</code>, as a parameter after three backticks:</p>
+<pre><code>```python
+# Example of code highlighting
+input_string_var = input(&quot;Enter some data: &quot;)
+print(&quot;You entered: {}&quot;.format(input_string_var))
+```</code></pre>
+<p>Result:</p>
+<pre class="python"><code># Example of code highlighting
+input_string_var = input(&quot;Enter some data: &quot;)
+print(&quot;You entered: {}&quot;.format(input_string_var))</code></pre>
+<div id="highlighting-options" class="section level3">
+<h3>Highlighting options</h3>
+<p>The Academic theme uses <a href="https://highlightjs.org">highlight.js</a> for source code highlighting, and highlighting is enabled by default for all pages. However, several configuration options are supported that allow finer-grained control over highlight.js.</p>
+<p>The following table lists the supported options for configuring highlight.js, along with their expected type and a short description. A “yes” in the <strong>config.toml</strong> column means the value can be set globally in <code>config.toml</code>, and a “yes” in the <strong>preamble</strong> column means that the value can be set locally in a particular page’s preamble.</p>
+<table>
+<thead>
+<tr class="header">
+<th>option</th>
+<th>type</th>
+<th>description</th>
+<th>config.toml</th>
+<th>preamble</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>highlight</code></td>
+<td>boolean</td>
+<td>enable/disable highlighting</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td><code>highlight_languages</code></td>
+<td>slice</td>
+<td>choose additional languages</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr class="odd">
+<td><code>highlight_style</code></td>
+<td>string</td>
+<td>choose a highlighting style</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<div id="option-highlight" class="section level4">
+<h4>Option <code>highlight</code></h4>
+<p>The <code>highlight</code> option allows enabling or disabling the inclusion of highlight.js, either globally or for a particular page. If the option is unset, it has the same effect as if you had specified <code>highlight = true</code>. That is, the highlight.js javascript and css files will be included in every page. If you’d like to only include highlight.js files on pages that actually require source code highlighting, you can set <code>highlight = false</code> in <code>config.toml</code>, and then override it by setting <code>highlight = true</code> in the preamble of any pages that require source code highlighting. Conversely, you could enable highlighting globally, and disable it locally for pages that do not require it. Here is a table that shows whether highlighting will be enabled for a page, based on the values of <code>highlight</code> set in <code>config.toml</code> and/or the page’s preamble.</p>
+<table>
+<thead>
+<tr class="header">
+<th>config.toml</th>
+<th>page preamble</th>
+<th>highlighting enabled for page?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>unset or true</td>
+<td>unset or true</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td>unset or true</td>
+<td>false</td>
+<td>no</td>
+</tr>
+<tr class="odd">
+<td>false</td>
+<td>unset or false</td>
+<td>no</td>
+</tr>
+<tr class="even">
+<td>false</td>
+<td>true</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="option-highlight_languages" class="section level4">
+<h4>Option <code>highlight_languages</code></h4>
+<p>The <code>highlight_languages</code> option allows you to specify additional languages that are supported by highlight.js, but are not considered “common” and therefore are not supported by default. For example, if you want source code highlighting for Go and clojure in all pages, set <code>highlight_languages = [&quot;go&quot;, &quot;clojure&quot;]</code> in <code>config.toml</code>. If, on the other hand, you want to enable a language only for a specific page, you can set <code>highlight_languages</code> in that page’s preamble.</p>
+<p>The <code>highlight_languages</code> options specified in <code>config.toml</code> and in a page’s preamble are additive. That is, if <code>config.toml</code> contains, <code>highlight_languages = [&quot;go&quot;]</code> and the page’s preamble contains <code>highlight_languages = [&quot;ocaml&quot;]</code>, then javascript files for <em>both</em> go and ocaml will be included for that page.</p>
+<p>If the <code>highlight_languages</code> option is set, then the corresponding javascript files will be served from the <a href="https://cdnjs.com/libraries/highlight.js/">cdnjs server</a>. To see a list of available languages, visit the <a href="https://cdnjs.com/libraries/highlight.js/">cdnjs page</a> and search for links with the word “languages”.</p>
+<p>The <code>highlight_languages</code> option provides an easy and convenient way to include support for additional languages to be severed from a CDN. If serving unmodified files from cdnjs doesn’t meet your needs, you can include javascript files for additional language support via one of the methods described in the [getting started guide]({{&lt; ref “post/getting-started.md#third-party-and-local-scripts-js” &gt;}}).</p>
+</div>
+<div id="option-highlight_style" class="section level4">
+<h4>Option <code>highlight_style</code></h4>
+<p>The <code>highlight_style</code> option allows you to select an alternate css style for highlighted code. For example, if you wanted to use the solarized-dark style, you could set <code>highlight_style = &quot;solarized-dark&quot;</code> in <code>config.toml</code>.</p>
+<p>If the <code>highlight_style</code> option is unset, the default is to use the file <code>/css/highlight.min.css</code>, either the one provided by the Academic theme, or else the one in your local <code>static</code> directory. The <code>/css/highlight.min.css</code> file provided by Academic is equivalent to the <code>github</code> style from highlight.js.</p>
+<p>If the <code>highlight_style</code> option <em>is</em> set, then <code>/css/highlight.min.css</code> is ignored, and the corresponding css file will be served from the <a href="https://cdnjs.com/libraries/highlight.js/">cdnjs server</a>. To see a list of available styles, visit the <a href="https://cdnjs.com/libraries/highlight.js/">cdnjs page</a> and search for links with the word “styles”.</p>
+<p>See the <a href="https://highlightjs.org/static/demo/">highlight.js demo page</a> for examples of available styles.</p>
+<p>{{% alert note %}} Not all styles listed on the <a href="https://highlightjs.org/static/demo/">highlight.js demo page</a> are available from the <a href="https://cdnjs.com/libraries/highlight.js/">cdnjs server</a>. If you want to use a style that is not served by cdnjs, just leave <code>highlight_style</code> unset, and place the corresponding css file in <code>/static/css/highlight.min.css</code>. {{% /alert %}}</p>
+<p>{{% alert note %}} If you don’t want to change the default style that ships with Academic but you do want the style file served from the <a href="https://cdnjs.com/libraries/highlight.js/">cdnjs server</a>, set <code>highlight_style = &quot;github&quot;</code> in <code>config.toml</code>. {{% /alert %}}</p>
+<p>The <code>highlight_style</code> option is only recognized when set in <code>config.toml</code>. Setting <code>highlight_style</code> in your page’s preamble has no effect.</p>
+</div>
+</div>
+</div>
+<div id="twitter-tweet" class="section level2">
+<h2>Twitter tweet</h2>
+<p>To include a single tweet, pass the tweet’s ID from the tweet’s URL as parameter to the shortcode:</p>
+<pre><code>{{&lt;/* tweet 666616452582129664 */&gt;}}</code></pre>
+</div>
+<div id="youtube" class="section level2">
+<h2>Youtube</h2>
+<pre><code>{{&lt;/* youtube w7Ft2ymGmfc */&gt;}}</code></pre>
+</div>
+<div id="vimeo" class="section level2">
+<h2>Vimeo</h2>
+<pre><code>{{&lt;/* vimeo 146022717 */&gt;}}</code></pre>
+</div>
+<div id="github-gist" class="section level2">
+<h2>GitHub gist</h2>
+<pre><code>{{&lt;/* gist gloria-scalzo GIST-ID  */&gt;}}</code></pre>
+</div>
+<div id="speaker-deck" class="section level2">
+<h2>Speaker Deck</h2>
+<pre><code>{{&lt;/* speakerdeck 4e8126e72d853c0060001f97 */&gt;}}</code></pre>
+</div>
+<div id="rm-latex-math" class="section level2">
+<h2><span class="math inline">\(\rm \LaTeX\)</span> math</h2>
+<pre class="tex"><code>$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$</code></pre>
+<p><span class="math display">\[\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi\]</span></p>
+<p>Alternatively, inline math can be written by wrapping the formula with only a single <code>$</code>:</p>
+<pre><code>This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$</code></pre>
+<p>This is inline: <span class="math inline">\(\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon\)</span></p>
+<p>Note that Markdown special characters need to be escaped with a backslash so they are treated as math rather than Markdown. For example, <code>*</code> and <code>_</code> become <code>\*</code> and <code>\_</code> respectively.</p>
+<div id="multiline-equations" class="section level3">
+<h3>Multiline equations</h3>
+<p>The standard LaTeX line break consisting of 2 backslashes needs to be replaced with 6 backslashes:</p>
+<pre class="tex"><code>$$f(k;p\_0^\*) = \begin{cases} p\_0^\* &amp; \text{if }k=1, \\\\\\
+1-p\_0^\* &amp; \text {if }k=0.\end{cases}$$</code></pre>
+<p><span class="math display">\[f(k;p\_0^\*) = \begin{cases} p\_0^\* &amp; \text{if }k=1, \\\\\\
+1-p\_0^\* &amp; \text {if }k=0.\end{cases}\]</span></p>
+</div>
+<div id="publication-abstracts" class="section level3">
+<h3>Publication abstracts</h3>
+<p>As Hugo and Academic attempt to parse TOML, Markdown, and LaTeX content in the abstract, the following guidelines should be followed just for the publication <code>abstract</code> and <code>abstract_short</code> fields:</p>
+<ul>
+<li>escape each LaTeX backslash (<code>\</code>) with an extra backslash, yielding <code>\\</code></li>
+<li>escape each LaTeX underscore (<code>_</code>) with two backslashes, yielding <code>\\_</code></li>
+</ul>
+<p>Hence, <code>abstract = &quot;${O(d_{\max})}$&quot;</code> becomes <code>abstract = &quot;${O(d\\_{\\max})}$&quot;</code>.</p>
+</div>
+</div>
+<div id="table" class="section level2">
+<h2>Table</h2>
+<p>Code:</p>
+<pre class="markdown"><code>| Command           | Description                    |
+| ------------------| ------------------------------ |
+| `hugo`            | Build your website.            |
+| `hugo serve -w`   | View your website.             |</code></pre>
+<p>Result:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>hugo</code></td>
+<td>Build your website.</td>
+</tr>
+<tr class="even">
+<td><code>hugo serve -w</code></td>
+<td>View your website.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="alerts" class="section level2">
+<h2>Alerts</h2>
+<p>Alerts are a useful feature that add side content such as tips, notes, or warnings to your articles. They are especially handy when writing educational tutorial-style articles. Use the corresponding shortcodes to enable alerts inside your content:</p>
+<pre><code>{{%/* alert note */%}}
+Here's a tip or note...
+{{%/* /alert */%}}</code></pre>
+<p>This will display the following <em>note</em> block:</p>
+<p>{{% alert note %}} Here’s a tip or note… {{% /alert %}}</p>
+<pre><code>{{%/* alert warning */%}}
+Here's some important information...
+{{%/* /alert */%}}</code></pre>
+<p>This will display the following <em>warning</em> block:</p>
+<p>{{% alert warning %}} Here’s some important information… {{% /alert %}}</p>
+</div>
+<div id="table-of-contents" class="section level2">
+<h2>Table of Contents</h2>
+<p>A table of contents may be particularly useful for long posts or tutorial/documentation type content. Use the <code>{{%/* toc */%}}</code> shortcode anywhere you wish within your Markdown content to automatically generate a table of contents.</p>
 </div>
 
 
