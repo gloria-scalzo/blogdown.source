@@ -1,8 +1,3 @@
----
-output:
-  html_document: default
-  pdf_document: default
----
 +++
 # About/Biography widget.
 widget = "about"
@@ -10,15 +5,14 @@ active = true
 date = "2018-10-18 T18:23:00"
 
 # Order that this section will appear in.
-weight = 55 kg
-height = 153 cm 
+weight = 10
 
 # List your academic interests.
 [interests]
   interests = [
     "Biology",
     "Animals",
-    "watching film and series"
+    "watching film and series",
     "reading books, specially Dan Brown's books"
   ]
 
