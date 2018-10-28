@@ -1,6 +1,6 @@
-baseurl = "https://gloria-scalzo.github.io/"
-title = "gloria scalzo"
-copyright = "&copy; 2018 gloria scalzo (license [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/))"
+baseurl = "https://Gloria-Scalzo.github.io/"
+title = "Gloria Scalzo"
+copyright = "&copy; 2018 Gloria Scalzo (license [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/))"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
@@ -34,14 +34,14 @@ defaultContentLanguageInSubdir = false
 [params]
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `coffee`, or `dark`.
-  color_theme = "ocean"
+  color_theme = "forest"
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
   font = "classic"
 
   # Your details.
-  name = "gloria scalzo"
+  name = "Gloria Scalzo"
   role = "Student at UMONS (University of Mons, Belgium)"
 
   # Organizations/Affiliations.
@@ -53,7 +53,7 @@ defaultContentLanguageInSubdir = false
   email = "gloria.scalzo@student.umons.ac.be"
   address = "Plaine de Nimy/Pentagone 3D, 8 avenue du champ de mars, 7000 Mons, Belgium"
   office_hours = "Please, send me an email for appointment"
-  phone = "+32/0XX.XX.XX.XX"
+  phone = "+32/471.53.38.55"
   skype = ""
   telegram = ""
 
@@ -93,7 +93,7 @@ defaultContentLanguageInSubdir = false
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
   date_format = "2006-01-02"
   #   Examples: "3:04 pm" or "15:04"
-  time_format = "15:04"
+  time_format = "3:04 pm"
 
   # Show estimated reading time for posts?
   reading_time = true
